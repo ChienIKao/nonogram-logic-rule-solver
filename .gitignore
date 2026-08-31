@@ -1,0 +1,15 @@
+# 編譯產物
+obj/*.o
+dep/*.d
+bin/*
+!obj/.gitkeep
+!dep/.gitkeep
+!bin/.gitkeep
+*.exe
+
+# 執行輸出
+log.txt
+output.txt
+
+# 編輯器
+.vscode/

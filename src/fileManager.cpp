@@ -1,0 +1,40 @@
+#include "fileManager.h"
+
+void readFile(char* name, int* data) {
+	FILE* ptr = fopen(name, "r");
+	for (int probNum = 0; probNum < 1000; ++probNum) {
+		char buff[100] = {};
+		fgets(buff, 100, ptr);
+		for (int i = 0; i < 50; ++i) {
+			int n = 0, count = 1;
+			char c = 0;
+
+			char buff2[200] = {};
+			char* g = fgets(buff2, 200, ptr);
+			int offset = 0;
+			while (sscanf(g, " %d%c%n", &n, &c, &offset)) {
+				if (offset == 0)
+					g += 1;
+				else
+					g += offset;
+
+				data[probNum * 50 * 14 + i * 14 + count] = n;
+
+				if (c == 10 || c == 13) {
+					data[probNum * 50 * 14 + i * 14] = count;
+					break;
+				}
+				count++;
+			}
+		}
+	}
+	fclose(ptr);
+}
+
+void getData(int* _data, int probNum, int* dest) {
+	probNum--;
+
+	memcpy(dest, _data + 50 * 14 * probNum, sizeof(int) * 50 * 14);
+
+	return;
+}
