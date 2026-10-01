@@ -5,7 +5,7 @@
 
 > **Chien-I Kao** and **Kuo-Chan Huang**, *A New Logic-Rule-Based Method for Solving Nonograms*,
 > 2025 Taiwan Computer Game Association (TCGA) Workshop on Computer Games, Taiwan, May 2025.
-> **🏆 Excellent Paper Award**
+> **🏆 2025 佳作論文獎（Honorable Mention Paper Award），台灣電腦對局學會**
 
 本研究為國科會大專學生研究計畫 `113-2813-C-142-002-E` 的成果，計畫主持人：高健壹。
 
